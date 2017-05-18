@@ -1,0 +1,43 @@
+@import "resets";
+@import "config";
+@import "mixins";
+
+body {
+  background-color: #ff5722;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.wrapper {
+  margin: 50px auto;
+
+  > * {
+    height: 40px;
+  }
+}
+
+
+
+input {
+  border: 0;
+}
+
+.button {
+  border: 0;
+  display: inline-block;
+  position: relative;
+  font-size: 0.9em;
+  background-color: #fff;
+  color: #646464;
+  transition: all 300ms ease;
+
+  &:hover {
+    background-color: darken(#FFF, 10%);
+  }
+}

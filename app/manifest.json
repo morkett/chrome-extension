@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+
+  "name": "Magnet Link Shortener",
+  "description": "This extension will shorten a magnet link for peerflix",
+  "version": "1.0",
+
+  "browser_action": {
+   "default_icon": "images/icon.png",
+   "default_popup": "popup.html"
+  },
+  "permissions": [
+   "activeTab"
+   ]
+}
