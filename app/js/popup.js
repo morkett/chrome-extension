@@ -28,6 +28,7 @@ button.addEventListener('click', function (e) {
 
   var copyNew = document.execCommand('copy', false, document.getElementById('select-this').select());
 
+  document.getElementById('select-outer').classList.add('select-outer-copy');
 
   console.log(test);
   console.log(copyNew);
