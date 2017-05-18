@@ -2,42 +2,90 @@
 @import "config";
 @import "mixins";
 
+html {
+  background: transparent !important;
+  outline: none !important;
+  border: none !important;
+}
 body {
-  background-color: #ff5722;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  width: 100%;
-
+margin: 0 !important;
+color: #333;
+width: 400px;
+height: 100px;
+padding: 20px;
+@include flex;
+background: linear-gradient(rgba(35,43,85,0.75), rgba(35,43,85,0.95)) no-repeat;
+font-family: 'Open Sans', sans-serif;
+outline: none !important;
+border: none !important;
+border-radius: 10px;
   * {
     box-sizing: border-box;
+    outline: none;
   }
 }
 
 .wrapper {
-  margin: 50px auto;
+  width: 100%;
 
-  > * {
-    height: 40px;
-  }
 }
 
 
 
 input {
   border: 0;
+  width: 100%;
+height: 35px;
+padding-left: 15px;
+border: none;
+border-radius: 20px;
+margin-bottom: 20px;
+background: rgba(255,255,255,.2);
+color: #fff;
+font-family: 'Open Sans', sans-serif;
+text-align: left;
+}
+
+input:focus {outline: none;}
+
+label {
+  position: relative;
+  font-weight: 400;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    color: rgba(255,255,255,.7);
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+#select-outer {
+  position: relative;
+}
+
+.select-outer-copy:after {
+  content: 'COPIED';
+  letter-spacing: .1em;
+  color: #fff;
+  @include flex;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 35px;
+  z-index: 9999;
+  border-radius: 20px;
+
+  background: rgba(35,43,85,0.8);
+
+
 }
 
 .button {
-  border: 0;
-  display: inline-block;
-  position: relative;
-  font-size: 0.9em;
-  background-color: #fff;
-  color: #646464;
-  transition: all 300ms ease;
-
-  &:hover {
-    background-color: darken(#FFF, 10%);
-  }
+  height: 0;
+  opacity: 0;
+  position: absolute;
 }

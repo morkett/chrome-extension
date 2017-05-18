@@ -17,8 +17,9 @@
 <body>
 
   <div class="wrapper">
+    <label for="select-this">Paste Link and Press Enter</label>
     <div id="select-outer">
-      <input id="select-this" value="" autofocus placeholder="paste link here" />
+      <input id="select-this" value="" autofocus />
     </div>
     <button class="button" id="clickMe">Click to copy</button>
   </div>
@@ -27,5 +28,11 @@
 <!-- build:js js/external.min.js-->
 <script src="js/popup.js"></script>
 <!-- endbuild -->
+
+<!-- build:js js/background.js-->
+<script src="js/background.js" charset="utf-8"></script>
+<!-- endbuild -->
+
+
 
 </html>
